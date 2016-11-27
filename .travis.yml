@@ -1,0 +1,9 @@
+language: node_js
+before_install: if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi && npm run-script decrypt-config
+node_js:
+- '4.4'
+script: npm run-script test
+after_success: echo "All went well!"
+env:
+  global:
+    secure: c+MhMGJrs/Vfldm2mvaO95OVknuD91Jni2fuPrE+fwlnpbn6w0ocltOzQj19aTRFyOCTl242aFvot/GWdxOftxhOz0KJyqly5wNRQ0PfCefTrFaYk9NBpr4xaYqUAh7yY3UoweeNZ2QkAlqgZ5P8TNoRJqIyNqoyZMUU3HJuIsmJJvIPOUjHXjK5Q/Q4zK0Nlv03XopteSOaBX60tXKhAJOftYnujscqFxC26U00bnEt2r7edBA6+T1+liUmNC4weVU4Pd7aYbahEmytmrYqKw1I3cT4uUVmXSephazj8BmpUjphj9V+BW31hDNiqKGJoUYYPMRYYDPCpCywunFdvmDAFd9JNBk4guXKxtD53FfcZs2O5Ic4kGFYqtvAUz06zGmhWWb5Z5N+uU7oTmj7SkxpsFF/8eN8QPJFdCDH72oyOQ/F4ih5lK7wEy0tnAmp0cerwEe2tOm6mtO2xdQgLFZUNcCMZKjF2qF+4eUrNRLXopBGslxYdcG9MrbHryvPkCbo/3ORz1eOEsbIBH2t83Drrr/g5jqcXk5gRiciXrmY1ub41vy3pfzHlpZrBX1BRuHeF9D+RQOVsOjLXQiJysE6Rg5PTNcfEDDEY3sOcMXI0bjM0pE7mB31FEA7hZyLB7TB6lBasQH0uaj1J+uRcpscPR5/Dxv2s7OhydpmzBE=
